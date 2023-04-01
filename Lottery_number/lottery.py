@@ -2,16 +2,23 @@ import random
 
 
 
+winning_number = 30
+username = input(" Enter your name to play: ")
+print("Hello", username, "welcome to cohort 1 lucky lottery")
+
+
 
 def lottery_app():
     while 1:
-        username = input("Enter your username to play: ")
-        number = input("enter your lucky number 0 - 50: ")
-        numbers = random.randint(0, 50)
-        if numbers == 30:
-           print("congratulations!", username,"you won")
+        username = int(input("enter any number from 0-50: "))
+        random_number = random.randint(0, 50)
+        if usernumber > 50:
+           print("Your input number is more than 50, sorry you are disqualified, try again later.")
+           exit()
+        elif usernumber == winning_number == random_number:
+            print("congratulations!", username, "you won")
         else:
-           print("sorry", username, "you lost. you didn't get the lucky number, try again")    
+           print("sorry", username, "you lost, you can try again")    
         
         
         
